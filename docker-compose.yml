@@ -14,9 +14,7 @@ services:
       - ACCESS_TOKEN_KEY=token
       - REQUEST_ID_KEY=X-Request-ID
       - REQUEST_TIME_KEY=X-Process-Time
-    ports:
-      - 8088:8000
-    # network_mode: host
+    network_mode: host
   db:
     image: postgres:12.1-alpine
     volumes:
